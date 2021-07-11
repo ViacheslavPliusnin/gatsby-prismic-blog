@@ -1,18 +1,9 @@
 import { Link } from "gatsby";
 import React from "react"
 import { ImageContainer, HeadingContainer, MainImage, Category, Date } from "../../templates/BlogPost/BlogPost.style";
-import styled from "styled-components";
-
-const SingleContainer = styled.div`
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    position: relative;
-    width: 1200px;
-    padding-top: 50px;
-`;
+import { SingleContainer } from "./SingleSection.style";
 
 const SingleSection = (props) => {
-
   return (
     <SingleContainer className="carousel">
       {props.blogs.map((blog, index) => {

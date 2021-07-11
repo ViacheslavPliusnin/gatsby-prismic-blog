@@ -1,13 +1,16 @@
 import React from "react"
-import Layout from "../components/Layout/Layout"
 
+import Layout from "../components/Layout/Layout"
+import Seo from "../components/Seo";
+import { PageContainer } from "../styles/pages.style";
 
 const About = () => {
   return (
       <Layout>
-        <div>
-            <h1>About page</h1>
-        </div>
+        <Seo title="About" /> 
+        <PageContainer>
+            <h2>Hi there! This is About page</h2>
+        </PageContainer>
       </Layout>
   )
 }

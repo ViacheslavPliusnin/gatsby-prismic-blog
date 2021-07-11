@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
-import "../style.css";
+import "../styles/style.css";
 
 import SmallBlockSection from "../components/SmallBlockSection/SmallBlockSection"
 import Layout from "../components/Layout/Layout";
