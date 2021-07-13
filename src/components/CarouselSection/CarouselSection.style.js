@@ -24,4 +24,7 @@ export const Button = styled.button`
     background-color: white;
     border: none;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;

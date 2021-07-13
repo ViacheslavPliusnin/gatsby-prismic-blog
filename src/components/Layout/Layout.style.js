@@ -46,7 +46,7 @@ export const SearchButton = styled.button`
     border: none;
     padding: 0;
 `;
-export const PagesLinks = styled.div`
+export const Navigation = styled.nav`
     background-color: white;
     height: 100%;
     width: 325px;
