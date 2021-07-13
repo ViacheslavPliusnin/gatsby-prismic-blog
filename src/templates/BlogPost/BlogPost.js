@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ pageContext, data }) => {
                     </HeadingContainer>
                     <MainImage src={blogData.main_image.url} alt={blogData.main_image.alt} />
                     <Category style={{backgroundColor: `${blogData.category_color}`}}>{blogData.category[0].text}</Category>
-                    <Date>{blogData.date} | <AuthorLink to={`/${data.allPrismicArticles.nodes[0].uid}`}>{blogData.author[0].text}</AuthorLink></Date>
+                    <Date>{blogData.date} | <AuthorLink to={`/authors/${blogData.author[0].text}`}>{blogData.author[0].text}</AuthorLink></Date>
                 </ImageContainer>
                 <TextContainer>
                   {blogData.description.map((p, i) => {
