@@ -16,10 +16,13 @@ const Seo = ({ title, lang, description }) => {
         title: title || defaultTitle,
         description: description || defaultDescription,
         icon: flaticon,
+        lang: {
+          lang: lang || "en"
+        },
       }
 
     return(
-        <Helmet htmlAttributes={{lang}} title={seo.title} titleTemplate={titleTemplate}>
+        <Helmet htmlAttributes={seo.lang} title={seo.title} titleTemplate={titleTemplate}>
           <meta name="description" content={seo.description} />
           <link rel="icon" type="image/png" href={flaticon} />
         </Helmet>
