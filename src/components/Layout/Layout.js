@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
                     <h2>Newsletter</h2>
                     <h4>Donec elementum dui semper, pretium dui quis, pretium nisl.</h4>
                     <form>
-                        <TextInput type="text" />
+                        <TextInput type="text" name="Email input" />
                         <SubmitInput type="button" value="Sign up" />
                     </form>
             </Newslatter>
