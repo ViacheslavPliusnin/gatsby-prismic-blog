@@ -49,12 +49,6 @@ export const SearchButton = styled.button`
     background-color: ${(props) => props.backgroundColor};
     border: none;
     padding: 0;
-    & > img {
-        transition: all 0.3s linear;
-    }
-    &:hover img{
-        transform: scale(1.05);
-    }
 `;
 export const Navigation = styled.nav`
     background-color: white;
@@ -67,10 +61,6 @@ export const Navigation = styled.nav`
         color: #b1b1b1;
         font-size: 18px;
         text-decoration: none;
-        transition: all 0.3s linear;
-    }
-    & > a:hover {
-        transform: scale(1.05);
     }
 `;
 export const CategoriesContainer = styled.div`

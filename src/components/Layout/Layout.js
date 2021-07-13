@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Header, HeaderConainer, PagesContainer, MainLink, SearchButton, CategoriesContainer, Footer, Newslatter, TextInput, SubmitInput, Navigation } from "./Layout.style";
-import Search from '../../images/search.png';
-import Menu from '../../images/menu.png';
+import { StaticImage } from "gatsby-plugin-image";
+
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
                 <Header>
                     <PagesContainer>
                         <MainLink to="/">Blog <span>template</span></MainLink>
-                        <SearchButton backgroundColor="#f6f6f6" width="60px"><img src={Search} alt="search icon" /></SearchButton>
+                        <SearchButton backgroundColor="#f6f6f6" width="60px"><StaticImage src='../../images/search.png' alt="search icon" /></SearchButton>
                         <Navigation>
                             <Link to="/about">About</Link>
                             <Link to="/cooperation">Cooperation</Link>
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
                         {filteredCategories.map((category, i) => {
                             return <Link key={i} to={`/categories/${category}`}>{category}</Link>
                         })}
-                        <SearchButton backgroundColor="white"><img src={Menu} alt="menu icon" /></SearchButton>
+                        <SearchButton backgroundColor="white"><StaticImage src='../../images/menu.png' alt="menu icon" /></SearchButton>
                     </CategoriesContainer>
                 </Header>
             </HeaderConainer>

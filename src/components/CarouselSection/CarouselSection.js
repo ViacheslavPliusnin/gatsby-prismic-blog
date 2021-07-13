@@ -2,8 +2,7 @@ import { Link } from "gatsby";
 import React, { useState } from "react"
 import { Button, Carousel } from "./CarouselSection.style";
 import { ImageContainer, HeadingContainer, MainImage, Category, Date } from "../../templates/BlogPost/BlogPost.style";
-import PrevArrow from '../../images/prev-arrow.png';
-import NextArrow from '../../images/next-arrow.png';
+import { StaticImage } from "gatsby-plugin-image";
 
 
 const CarouselSection = (props) => {
@@ -19,7 +18,7 @@ const CarouselSection = (props) => {
 
   return (
     <Carousel className="carousel">
-      <Button className="arrow prev" onClick={prevSlide} left="0px"><img src={PrevArrow} alt="Previous slide arrow" /></Button>
+      <Button className="arrow prev" onClick={prevSlide} left="0px"><StaticImage src='../../images/prev-arrow.png' alt="Previous slide arrow" layout="fixed" /></Button>
       {props.blogs.map((blog, index) => {
         return <div className={index === current ? 'slide active' : 'slide'} key={index}>
             {index === current && (
@@ -37,7 +36,7 @@ const CarouselSection = (props) => {
             )}
           </div>
       })}
-      <Button className="arrow next" onClick={nextSlide} right="0px"><img src={NextArrow} alt="Next slide arrow" /></Button>
+      <Button className="arrow next" onClick={nextSlide} right="0px"><StaticImage src='../../images/next-arrow.png' alt="Next slide arrow" layout="fixed" /></Button>
     </Carousel>
   )
 }
